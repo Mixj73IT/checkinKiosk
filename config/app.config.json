@@ -1,0 +1,43 @@
+{
+  "stationId": "KIOSK-01",
+  "schoolName": "Somerset Christian School",
+  "timezone": "America/New_York",
+  "ui": {
+    "theme": "dark-navy",
+    "photoPopupSeconds": 3,
+    "beep": true,
+    "voiceEnabled": false
+  },
+  "scan": {
+    "debounceSeconds": 3,
+    "undoWindowSeconds": 45
+  },
+  "schoolDay": {
+    "start": "08:00",
+    "end": "15:30",
+    "quietHours": {
+      "start": "18:00",
+      "end": "06:30"
+    }
+  },
+  "cutoffs": {
+    "globalCutoff": "12:00",
+    "graceMinutes": 15,
+    "escalationDelayMinutes": 60
+  },
+  "scheduling": {
+    "alertCheckEverySeconds": 60,
+    "dailySummaryTime": "12:15",
+    "eodReconciliationTime": "15:30",
+    "heartbeatMinutes": 5,
+    "queueRetryBackoffSeconds": [
+      30,
+      120,
+      600
+    ]
+  },
+  "storage": {
+    "retentionDays": 365,
+    "csvExportDir": "exports"
+  }
+}

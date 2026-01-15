@@ -1,0 +1,33 @@
+
+appId: com.scs.kiosk
+productName: Student Kiosk
+files:
+  - "dist/**"
+  - "src/main/**"
+  - "assets/**"
+  - "config/**"
+  - "db/migrations/**"
+  - "provision/**"
+  - "!**/*.map"
+extraResources:
+  - from: "assets"
+    to: "assets"
+  - from: "config"
+    to: "config"
+  - from: "db/migrations"
+    to: "db/migrations"
+asar: true
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: "assets/icon.ico"
+nsis:
+  oneClick: true
+  perMachine: true
+  runAfterFinish: false
+  include: build/installer.nsh
+
+directories:
+  output: "release"
